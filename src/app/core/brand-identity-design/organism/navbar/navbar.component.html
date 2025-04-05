@@ -1,0 +1,31 @@
+<nav class="nav nav--container">
+    <!-- Mobile Navigation -->
+    <ng-container *ngIf="isMobile; else desktopNav">
+      <ng-container *ngIf="isMenuOpen; else hamburgerButton">
+        <app-close-hamburguer-button (click)="toggleMenu()" class="close__hamburguer"></app-close-hamburguer-button>
+      </ng-container>
+      <ng-template #hamburgerButton>
+        <app-hamburguer-button (click)="toggleMenu()" class="hamburguer"></app-hamburguer-button>
+      </ng-template>
+      <div class="mobile-menu" *ngIf="isMenuOpen">
+        <ng-container *ngFor="let link of navLinks">
+          <app-nav-link 
+            [nameLink]="link.title" 
+            [routerLink]="link.path" 
+            (linkClick)="onNavLinkClick($event)">
+          </app-nav-link>
+        </ng-container>
+      </div>
+    </ng-container>
+  
+    <!-- Desktop Navigation -->
+    <ng-template #desktopNav>
+      <ng-container *ngFor="let link of navLinks">
+        <app-nav-link 
+          [nameLink]="link.title" 
+          [routerLink]="link.path" 
+          (linkClick)="onNavLinkClick($event)">
+        </app-nav-link>
+      </ng-container>
+    </ng-template>
+  </nav>

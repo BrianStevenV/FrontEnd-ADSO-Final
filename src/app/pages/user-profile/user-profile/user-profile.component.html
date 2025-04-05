@@ -1,0 +1,35 @@
+
+<div>
+    <div *ngIf="!isEditing && user" class="user-info-container">
+      <div class="user-info-container__header">
+        <h1 class="user-info-container__title">User Information</h1>
+      </div>
+      
+      <ng-container *ngFor="let field of displayFields">
+        <div class="user-info-item">
+          <h3 class="user-info-item__label">{{ field.label }}</h3>
+          <p class="user-info-item__value">{{ getDisplayValue(field.key) }}</p>
+        </div>
+      </ng-container>
+      
+      <div class="action-buttons">
+        <app-button 
+          [props]="updateUserInfoBtn" 
+          class="action-buttons__button" 
+          (click)="toggleEditMode()">
+        </app-button>
+      </div>
+    </div>
+  
+    <div *ngIf="isEditing" class="edit-form">
+      <div class="edit-form__header">
+        <h1 class="edit-form__title">Edit User Information</h1>
+      </div>
+      
+      <app-form-submit 
+        [formGroup]="formGroup" 
+        [fields]="userUpdateFields" 
+        [buttons]="[submitUserInfoBtn, backBtn]">
+      </app-form-submit>
+    </div>
+  </div>

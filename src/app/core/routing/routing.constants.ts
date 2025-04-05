@@ -1,0 +1,12 @@
+export const ROUTE_OFFERS = 'offers'
+export const ROUTE_PRODUCTS = 'products'
+export const ROUTE_BLOG = 'blog'
+export const ROUTE_CART = 'cart'
+export const ROUTE_PROFILE = 'profile'
+
+export const ROUTE_ABOUT_US = 'about-us'
+export const ROUTE_CONTACT_US = 'contact-us'
+export const ROUTE_PRIVACY_POLICY = 'privacy-policy'
+export const ROUTE_TERMS_AND_CONDITIONS = 'terms-and-conditions'
+export const ROUTE_FAQ = 'faq'
+export const ROUTE_SUBSCRIBE = 'subscribe'

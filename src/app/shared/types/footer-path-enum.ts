@@ -1,0 +1,11 @@
+import { TITLE_ABOUT_US, TITLE_CONTACT_US, TITLE_PRIVACY_POLICY, TITLE_TERMS_AND_CONDITIONS, TITLE_FAQ, TITLE_SUBSCRIBE } from "../../core/routing/name.routing.constants";
+import { ROUTE_ABOUT_US, ROUTE_CONTACT_US, ROUTE_FAQ, ROUTE_PRIVACY_POLICY, ROUTE_SUBSCRIBE, ROUTE_TERMS_AND_CONDITIONS } from "../../core/routing/routing.constants";
+
+export const FooterPaths = [ 
+    {path: ROUTE_ABOUT_US, title: TITLE_ABOUT_US},
+    {path: ROUTE_CONTACT_US, title: TITLE_CONTACT_US},
+    {path: ROUTE_PRIVACY_POLICY, title: TITLE_PRIVACY_POLICY},
+    {path: ROUTE_TERMS_AND_CONDITIONS, title: TITLE_TERMS_AND_CONDITIONS},
+    {path: ROUTE_FAQ, title: TITLE_FAQ},
+    {path: ROUTE_SUBSCRIBE, title: TITLE_SUBSCRIBE},
+]

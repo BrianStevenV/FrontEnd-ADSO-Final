@@ -1,0 +1,27 @@
+.header {
+  background-color: #9d3fe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &--logo {
+      justify-content: flex-start;
+      flex: 1;
+    }
+
+    &--search {
+      flex: 2;
+    }
+
+    &--nav {
+      justify-content: flex-end;
+      flex: 2;
+    }
+  }
+}

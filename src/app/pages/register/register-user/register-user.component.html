@@ -1,0 +1,42 @@
+<div class="multi-step-form">
+  <header>
+    <h1>Register Page</h1>
+  </header>
+  <!-- Step 0: Role Selection -->
+  <div *ngIf="currentStep === 0" class="multi-step-form__step">
+    <h2>Select User Type</h2>
+    <div class="wrapper wrapper--role--selection wrapper--role--selection__buttons">
+      <app-form-submit 
+      [buttons]="[customerUserBtn, providerUserBtn]"
+      ></app-form-submit>
+    </div>
+    
+  </div>
+  
+  <!-- Step 1: User Information -->
+  <div *ngIf="currentStep === 1" class="multi-step-form__step">
+    <h2>User Information</h2>
+    <app-form-submit 
+      [formGroup]="formGroup"
+      [fields]="userFields"
+      [buttons]="[nextBtnProps]"
+    ></app-form-submit>
+  </div>
+
+  <!-- Step 2: Payment Information -->
+  <div *ngIf="currentStep === 2" class="multi-step-form__step">
+    <h2>Payment Information</h2>
+    <app-form-submit 
+      [formGroup]="formGroup"
+      [fields]="paymentFields"
+      [buttons]="[prevBtnProps, submitBtnProps]"
+    ></app-form-submit>
+  </div>
+
+  <div *ngIf="currentStep === 1 || currentStep === 2" class="multi-step-form__back-button">
+    <app-form-submit 
+      [buttons]="[backToRoleSelectionBtn]"
+    ></app-form-submit>
+  </div>
+  
+</div>

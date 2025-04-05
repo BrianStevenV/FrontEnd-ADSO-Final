@@ -1,0 +1,42 @@
+.footer-nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  
+    ::ng-deep app-nav-link {
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 390px) and (max-width: 48rem) {
+    .footer-nav-list {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-nav-list li {
+      margin-bottom: 1rem; /* Espacio entre los elementos de la lista */
+    }
+  
+    ::ng-deep app-nav-link {
+      font-size: 1.125rem; /* Tamaño de fuente más grande en pantallas pequeñas */
+    }
+  }
+  

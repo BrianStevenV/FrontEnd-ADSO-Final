@@ -1,0 +1,14 @@
+<section class="wrapper">
+    <app-banner class="wrapper banner__home"
+        [props]="bannerProps"
+    ></app-banner>
+    
+    <app-title-h1 [title]="subtitle"></app-title-h1>
+    
+    <section class="wrapper card__products">
+        <app-card-product 
+            *ngFor="let product of productsList()" 
+            [props]="product" 
+        ></app-card-product>
+    </section>
+</section>

@@ -1,0 +1,48 @@
+.button {
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    background: transparent; 
+  
+    
+    color: inherit; 
+  
+    &--submit {
+      background-color: Green;
+    }
+  
+    &--close {
+      background-color: #d51a52; 
+      color: black;
+  
+      
+    }
+
+    &--button{
+      background-color: #3E3E63;
+      color: white
+    }
+  
+    &--secondary {
+      color: #6c757d;
+  
+      &:hover {
+        color: darken(#6c757d, 10%); 
+      }
+    }
+  
+    &:hover {
+      
+      text-decoration: none; 
+    }
+
+  }
+
+  @media (min-width: 600px){
+    .button {
+      padding: 10px 40px;
+      font-size: 18px;
+    }
+  }

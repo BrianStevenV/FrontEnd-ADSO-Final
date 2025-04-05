@@ -1,0 +1,20 @@
+<section class="wrapper">
+    <div class="wrapper__image">
+        <app-image-optimized
+            [props]="imageLogin"
+        ></app-image-optimized>
+    </div>
+
+    <section>
+        <div>
+            <h1>Login User</h1>
+        </div>
+        <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+            <app-form-submit
+                [formGroup]="loginFormGroup"
+                [fields]="fields"
+                [buttons]="buttons"
+            ></app-form-submit>
+        </form>
+    </section>
+</section>
