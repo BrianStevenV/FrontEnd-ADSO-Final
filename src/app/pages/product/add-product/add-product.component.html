@@ -1,0 +1,27 @@
+<div class="multi-step-form">
+    <div>
+        <h1>Add to Product</h1>
+    </div>
+    <div *ngIf="currentStep === 0" class="multi-step-form__step">
+        <h2>
+            Product General Information
+        </h2>
+        <app-form-submit
+            [formGroup]="formGroup"
+            [fields]="productFields"
+            [buttons]="[backBtnProps, nextBtnProps]"
+        ></app-form-submit>
+    </div>
+
+    <div *ngIf="currentStep === 1" class="multi-step-form__step">
+        <h2>
+            Product Attributes Information
+        </h2>
+        <app-form-submit
+            [formGroup]="formGroup"
+            [fields]="attributeProductFields"
+            [buttons]="[prevBtnProps, submitBtnProps]"
+        ></app-form-submit>
+
+    </div>  
+</div>

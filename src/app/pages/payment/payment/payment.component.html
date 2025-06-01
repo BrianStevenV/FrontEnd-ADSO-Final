@@ -1,0 +1,22 @@
+<div class="multi-step-form">
+    <div>
+        <h2>Summary Order</h2>
+    </div>
+    <div>
+        <h5>Order ID: {{ order.orderId }}</h5>
+        <p>Status: {{ order.status }}</p>
+    </div>
+    <div>
+        <app-card-cart-details [props]="{ orderItems: order.items }"></app-card-cart-details>
+    </div>
+    <div>
+        <h2>Shipping Information</h2>
+    </div>
+    <div>
+        <app-form-submit
+            [formGroup]="formGroup"
+            [fields]="shippingFields"
+            [buttons]="[prevBtnProps, buyBtnProps]"
+        ></app-form-submit>
+    </div> 
+</div>

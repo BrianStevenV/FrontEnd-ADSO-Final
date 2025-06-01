@@ -1,0 +1,13 @@
+.wrapper{
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+
+}
+
+.wrapper--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

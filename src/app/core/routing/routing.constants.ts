@@ -1,8 +1,8 @@
 export const ROUTE_OFFERS = 'offers'
-export const ROUTE_PRODUCTS = 'products'
+export const ROUTE_PRODUCTS = 'home'
 export const ROUTE_BLOG = 'blog'
 export const ROUTE_CART = 'cart'
-export const ROUTE_PROFILE = 'profile'
+export const ROUTE_PROFILE = 'user-profile'
 
 export const ROUTE_ABOUT_US = 'about-us'
 export const ROUTE_CONTACT_US = 'contact-us'

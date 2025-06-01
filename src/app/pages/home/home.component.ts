@@ -68,13 +68,13 @@ export class HomeComponent implements OnInit{
           button: {
             buttonName: 'View Details',
             buttonType: 'button',
-            onClick: () => console.log("im here") 
+            onClick: () => this.navigate(product.id), 
           }
         }));
         this.productsList.set(productsMappers);
       }),
       catchError((error) => {
-        console.error(error);
+        
         return of([]);
       })
     ).subscribe();
@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit{
   
 
   navigate(productId: number): void {
-    this.router.navigate(['/product/details', productId]);
+    this.router.navigate(['product/details/', productId]);
   }
 
 }

@@ -1,0 +1,158 @@
+// Variables
+$primary-color: #007bff;
+$text-color-dark: #333;
+$text-color-medium: #555;
+$background-light: #f8f8f8;
+$card-bg: #fff;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-hover: rgba(0, 0, 0, 0.15);
+
+// Main container for the product card
+.product-card {
+  display: flex;
+  flex-direction: row; // Default: image on left, details on right
+  align-items: flex-start; // Align items to the top
+  background-color: $card-bg;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px $shadow-light;
+  margin-bottom: 2rem;
+  gap: 1.5rem; // Space between image section and details section
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 12px $shadow-hover;
+    transform: translateY(-3px);
+  }
+
+  // Section for the product image
+  .product-image-section {
+    flex-shrink: 0; // Prevent image section from shrinking
+    border-radius: 8px;
+    overflow: hidden; // Ensures image corners are rounded
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Shadow for the image part
+    
+    // Style for the app-image-optimized component itself, if needed
+    app-image-optimized {
+      display: block; // Ensures it takes full width of its container
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // Section for the product details (title, price, description, button)
+  .product-details-section {
+    display: flex;
+    flex-direction: column; // Stack elements inside this section vertically
+    flex-grow: 1; // Allows this section to take remaining horizontal space
+    align-items: end;
+    
+    // Title
+    app-title-h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.8em;
+      color: $text-color-dark;
+      line-height: 1.2;
+    }
+
+    // Price
+    .product-price {
+      color: $primary-color;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    // Description container
+    .product-description-container {
+      flex-grow: 1; // Allows description to take available vertical space
+      p {
+        color: $text-color-medium;
+        line-height: 1.6;
+        margin-bottom: 1.5rem; // Space before button
+        font-size: 1em;
+      }
+    }
+
+    // Button container
+    .product-button-container {
+      align-items: end;
+      margin-top: auto; // Pushes the button to the bottom if description grows
+    }
+  }
+}
+
+/* --- Responsive Styles (Tablet and Mobile) --- */
+
+@media (max-width: 768px) { // Tablets and larger phones
+  .product-card {
+    flex-direction: column; // Stack image and details vertically
+    align-items: center; // Center all content horizontally
+    padding: 1rem;
+    gap: 1rem; // Adjust gap for vertical stacking
+    text-align: center; // Center text content within the card
+
+    .product-image-section {
+      width: 100%; // Image section takes full width
+      max-width: 300px; // But constrain its max size
+      margin-bottom: 0.5rem; // Space between image and details
+      box-shadow: none; // Reduce shadow on image for mobile for a flatter look
+    }
+
+    .product-details-section {
+      align-items: center; // Center content elements within the details section
+      text-align: center; // Center text within the details section
+      padding: 0; // Remove any extra padding if it exists
+    }
+
+    app-title-h3 {
+      font-size: 1.5em; // Smaller title
+      margin-bottom: 0.3rem;
+    }
+
+    .product-price {
+      font-size: 2em; // Adjust price size
+      margin-top: 0.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .product-description-container {
+      p {
+        font-size: 0.9em; // Smaller description font
+        margin-bottom: 1rem;
+      }
+    }
+
+    .product-button-container {
+      align-self: center; // Center the button
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) { // Smaller phones
+  .product-card {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+
+    .product-image-section {
+      max-width: 250px; // Even smaller max-width for image
+    }
+
+    app-title-h3 {
+      font-size: 1.3em;
+    }
+
+    .product-price {
+      font-size: 1.8em;
+    }
+
+    .product-description-container {
+      p {
+        font-size: 0.85em;
+      }
+    }
+  }
+}

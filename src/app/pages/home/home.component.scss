@@ -1,6 +1,6 @@
 .wrapper {
     // margin: 0 3.25rem;
-    align-items: center; /* Alineación centrada */
+    align-items: center; 
     // background-color: red;
 }
 
@@ -8,7 +8,7 @@ app-title-h1 {
     margin: 1.5rem 0;
 }
 
-/* Sección de productos con diseño responsivo */
+
 .card__products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -19,7 +19,7 @@ app-title-h1 {
     justify-content: center;
 }
 
-/* Ajuste para pantallas más pequeñas */
+
 @media (max-width: 768px) {
     .wrapper {
         margin: 0 1.5rem;
@@ -58,7 +58,7 @@ app-title-h1 {
 
     .banner__home {
         padding: 4rem;
-        max-width: 1400px; /* Se expande un poco más en pantallas grandes */
+        max-width: 1400px; 
     }
 
     .card__products {
@@ -68,7 +68,7 @@ app-title-h1 {
     }
 }
 
-/* Ajuste para pantallas extra grandes (1440px en adelante) */
+
 @media (min-width: 1440px) {
     .wrapper {
         margin: 0 10rem;

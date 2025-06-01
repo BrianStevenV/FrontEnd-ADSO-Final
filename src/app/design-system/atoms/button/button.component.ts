@@ -6,7 +6,7 @@ import { ButtonProps } from '../../../shared/types/types-prop-design-system/atom
   standalone: true,
   imports: [],
   template: `
-  <button type={{props.buttonType}} class="button button--{{props.buttonType}}" (click)="handleClick()">{{props.buttonName}}</button>
+  <button type={{props.buttonType}} class="button button--{{props.buttonType}}" (click)="handleClick()" [attr.type]="props.buttonType">{{props.buttonName}}</button>
   `,
   styleUrl: './button.component.scss'
 })

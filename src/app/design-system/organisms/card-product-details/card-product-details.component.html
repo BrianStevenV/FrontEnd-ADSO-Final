@@ -1,0 +1,21 @@
+<div class="product-card"> 
+    <div class="product-image-section"> 
+        <app-image-optimized
+            [props]="imageCard"
+        ></app-image-optimized>
+    </div>
+    <div class="product-details-section"> 
+        <app-title-h3 [title]="props.title"></app-title-h3>
+
+        <h2 class="product-price">{{ formattedPrice }}</h2>
+
+        <div class="product-description-container">
+            <p>{{ props.description }}</p>
+        </div>
+        <div class="product-button-container">
+            <app-button
+                [props]="addToCartBtnProps"
+            ></app-button>
+        </div>
+    </div>
+</div>

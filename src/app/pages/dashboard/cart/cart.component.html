@@ -1,0 +1,11 @@
+<div class="multi-step-form">
+    <div>
+        <h2>Cart Information</h2>
+    </div>
+    <div>
+        <app-card-cart-details [props]="{ orderItems: order.items }"></app-card-cart-details>
+    </div>
+    <div>
+        <app-button *ngIf="btnGoToPaymentMethodsProps" [props]="btnGoToPaymentMethodsProps"></app-button>
+    </div>
+</div>

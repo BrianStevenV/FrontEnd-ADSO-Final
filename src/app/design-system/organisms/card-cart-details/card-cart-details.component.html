@@ -1,0 +1,28 @@
+
+
+<div class="card-cart-details-container">
+  <div *ngIf="props?.orderItems && props.orderItems.length > 0; else noItems" class="cart-items-list">
+    <div *ngFor="let item of props.orderItems" class="cart-item-card">
+      <figure class="item-figure">
+        <div class="item-image-wrapper"> <app-image-optimized
+            [props]="imageCard"
+          ></app-image-optimized>
+        </div>
+        <figcaption class="item-details">
+          <p class="product-id">Producto ID: {{ item.productId }}</p>
+          <p class="quantity">Cantidad: {{ item.quantity }}</p>
+          <p class="unit-price">Precio Unitario: ${{ item.unitPrice | number:'1.2-2' }}</p>
+          <p class="item-total">Total por Item: ${{ item.itemTotal | number:'1.2-2' }}</p>
+        </figcaption>
+      </figure>
+      <hr />
+    </div>
+    <div class="cart-total">
+      <h4>Total del Carrito: {{ getTotalPrice() | currency:'USD':'symbol':'1.2-2' }}</h4>
+    </div>
+  </div>
+
+  <ng-template #noItems>
+    <p class="no-items-message">No hay items en el carrito.</p>
+  </ng-template>
+</div>

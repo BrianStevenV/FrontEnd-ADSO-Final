@@ -1,26 +1,26 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem; // Espacio entre el label y el input, pero dentro de la misma unidad
+    gap: 3.5rem; 
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; // Espacio entre label e input
+    gap: 0.5rem; 
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 2rem; // Espacio entre cada form-field
+    gap: 2rem; 
     
 }
 
 .buttons-container {
     display: flex;
     justify-content: center;
-    gap: 16px; /* Ajusta el espacio entre los botones */
-    flex-wrap: nowrap; /* Evita que se apilen */
+    gap: 16px; 
+    flex-wrap: nowrap;
 }
 

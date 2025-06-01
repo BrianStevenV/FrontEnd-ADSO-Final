@@ -45,9 +45,7 @@
   }
 }
 
-// ======================= 
-// 📱 Small devices (< 576px) 
-// ======================= 
+
 @media (max-width: 575.98px) {
   .banner {
     flex-direction: column;
@@ -65,9 +63,7 @@
   }
 }
 
-// ======================= 
-// 📱📱 Medium devices (≥ 576px and < 768px) 
-// ======================= 
+
 @media (min-width: 576px) and (max-width: 767.98px) {
   .banner {
     flex-direction: column;
@@ -85,9 +81,6 @@
   }
 }
 
-// ======================= 
-// 💻 Tablets (768px)
-// ======================= 
 @media (min-width: 768px) and (max-width: 868.98px) {
   .banner {
     flex-direction: row;
@@ -104,9 +97,7 @@
   }
 }
 
-// =======================
-// 💻 Tablets (869px to 969px)
-// =======================
+
 @media (min-width: 869px) and (max-width: 969.98px) {
   .banner {
     flex-direction: row;
@@ -123,9 +114,7 @@
   }
 }
 
-// =======================
-// 💻 Small desktops (970px to 1070px)
-// =======================
+
 @media (min-width: 970px) and (max-width: 1070.98px) {
   .banner {
     flex-direction: row;
@@ -141,9 +130,7 @@
   }
 }
 
-// =======================
-// 🖥️ Medium desktops (1071px to 1171px)
-// =======================
+
 @media (min-width: 1071px) and (max-width: 1171.98px) {
   .banner {
     flex-direction: row;
@@ -159,9 +146,7 @@
   }
 }
 
-// =======================
-// 🖥️ Medium-large desktops (1172px to 1272px)
-// =======================
+
 @media (min-width: 1172px) and (max-width: 1272.98px) {
   .banner {
     flex-direction: row;
@@ -178,9 +163,6 @@
   }
 }
 
-// =======================
-// 🖥️ Large desktops (1273px to 1369px)
-// =======================
 @media (min-width: 1273px) and (max-width: 1369.98px) {
   .banner {
     flex-direction: row;
@@ -196,9 +178,6 @@
   }
 }
 
-// =======================
-// 🖥️ Extra large desktops (≥ 1370px to 1469px)
-// =======================
 @media (min-width: 1370px) and (max-width: 1469.98px) {
   .banner {
     flex-direction: row;
@@ -214,9 +193,7 @@
   }
 }
 
-// =======================
-// 🖥️ Jumbo desktops (≥ 1470px)
-// =======================
+
 @media (min-width: 1470px) {
   .banner {
     flex-direction: row;

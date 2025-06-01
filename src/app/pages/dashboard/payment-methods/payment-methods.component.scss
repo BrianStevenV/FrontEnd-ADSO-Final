@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  justify-content: center;   // Centra horizontalmente
+  align-items: center;       // Centra verticalmente            // Ocupa toda la altura de la ventana
+}
+
+div {
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  app-form-submit {
+    display: inline-block; 
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 15%;
+  }
+}

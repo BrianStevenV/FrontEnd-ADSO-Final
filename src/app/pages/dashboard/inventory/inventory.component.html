@@ -1,0 +1,60 @@
+<div>
+    <div>
+        <h1>Inventory Dashboard</h1>
+    </div>
+
+    <div>
+        <h2>Actions Buttons</h2>
+    </div>
+    <div class="wrapper wrapper--flex">
+        <div>
+            <app-button
+            [props]="addBtnProps"
+            ></app-button>
+        </div>
+        <div>
+            <app-button
+            [props]="updateBtnProps"
+            ></app-button>
+        </div>
+        <div>
+            <app-button
+            [props]="addStockBtnProps"
+            ></app-button>
+        </div>
+        <div>
+            <app-button
+            [props]="disableBtnProps"
+            ></app-button>
+        </div>
+        <div>
+            <app-button
+            [props]="addProductAttributeBtnProps"
+            >    
+            </app-button>
+        </div>
+
+
+    </div>
+
+    <app-modal
+    *ngIf="modalVisible"
+    [title]="modalTitle"
+    [closeButtonName]="closeButtonNameModal"
+    [submitButtonName]="submitButtonNameModal"
+    [formFields]="modalFormFields"
+    (closeModalEvent)="closeModal()"
+    (submitEvent)="onModalSubmit($event)">
+    </app-modal>
+
+
+    <div>
+        <app-table
+        [headers]="headers"
+        [keys]="keys"
+        [data]="dataToDashboard">
+        </app-table>
+
+    </div>
+
+</div>

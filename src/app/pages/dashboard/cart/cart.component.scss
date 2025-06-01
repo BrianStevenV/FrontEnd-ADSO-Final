@@ -1,0 +1,16 @@
+.multi-step-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+    background-color:  #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 5%;    
+    padding-bottom: 5%;
+}
+
+h2 {
+    text-align: center;
+}

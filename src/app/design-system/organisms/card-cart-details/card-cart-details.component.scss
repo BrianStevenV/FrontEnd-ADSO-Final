@@ -1,0 +1,194 @@
+
+
+/* Estilos para el contenedor principal de la lista de items */
+.card-cart-details-container {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem; // Espacio debajo del componente
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column; // Los items del carrito se apilan verticalmente
+  gap: 1.5rem; // Espacio entre cada tarjeta de item
+}
+
+/* Estilos para cada "card" de item (el contenedor individual de cada producto) */
+.cart-item-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out; // Transición suave al pasar el ratón
+
+  &:hover {
+    transform: translateY(-3px); // Efecto de elevación al pasar el ratón
+  }
+
+  // Desktop/Large Screen Styles (default)
+  .item-figure {
+    display: flex; // Imagen y figcaption en horizontal
+    align-items: center; // Alinea verticalmente al centro
+    gap: 1rem; // Espacio entre la imagen y los detalles
+  }
+
+  .item-image-wrapper {
+    flex-shrink: 0; // Evita que la imagen se encoja
+    // Si necesitas centrar la imagen dentro de este wrapper en móvil, puedes añadir:
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .item-details {
+    display: flex;
+    flex-direction: column; // Los detalles del item en columna
+    flex-grow: 1; // Permite que los detalles ocupen el espacio restante
+    align-items: end;
+    
+    p {
+      margin: 0.2rem 0; // Espacio reducido entre los párrafos de detalles
+      font-size: 0.9rem;
+      line-height: 1.4; // Mejora la legibilidad
+
+      &.product-id {
+        font-weight: bold;
+        color: #333;
+      }
+      &.product-name {
+        font-style: italic;
+        color: #555;
+      }
+      &.quantity {
+        color: #666;
+      }
+      &.unit-price {
+        color: #007bff;
+        font-weight: 600;
+        font-size: 1rem; // Un poco más grande para el precio unitario
+      }
+      &.item-total {
+        font-weight: bold;
+        color: #28a745; // Color para el total del item
+        font-size: 1.1rem; // Más destacado para el total del item
+        margin-top: 0.5rem; // Espacio extra antes del total
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px dashed #e0e0e0;
+    margin: 1.5rem 0 0; // Espacio después de cada item, antes de la línea
+  }
+}
+
+/* Estilos para el total del carrito */
+.cart-total {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #007bff; // Línea destacada para el total
+  text-align: right;
+
+  h4 {
+    margin: 0;
+    color: #007bff;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+/* Mensaje cuando no hay items */
+.no-items-message {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 1.1rem;
+}
+
+/* --- Estilos Responsivos (Tablet y Móvil) --- */
+
+@media (max-width: 768px) { // Para tablets y teléfonos grandes
+  .cart-item-card {
+    padding: 1.2rem; // Aumenta un poco el padding de la tarjeta
+
+    .item-figure {
+      flex-direction: column; // ¡Imagen arriba, figcaption abajo!
+      align-items: center; // Centra la imagen y los detalles horizontalmente
+      text-align: center; // Centra el texto dentro de figcaption
+      gap: 1rem; // Espacio entre imagen y detalles
+    }
+
+    .item-image-wrapper {
+      margin-bottom: 0.8rem; // Espacio entre la imagen y los detalles
+      // Si quieres que la imagen sea un poco más grande en tablet, puedes ajustar aquí
+      app-image-optimized {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    .item-details {
+      align-items: center; // Centra los textos en la vista móvil
+      text-align: center; // Asegura que el texto esté centrado
+      width: 100%; // Ocupa todo el ancho disponible
+      padding-top: 0; // No se necesita padding superior extra si ya hay gap en item-figure
+      
+      p {
+        font-size: 0.9rem; // Ajusta el tamaño de fuente para pantallas más pequeñas
+      }
+      .unit-price, .item-total {
+        font-size: 1rem; // Mantiene los precios legibles
+      }
+    }
+
+    hr {
+      margin-top: 1.5rem; // Un poco más de espacio si los elementos están apilados
+    }
+  }
+
+  .cart-total {
+    text-align: center; // Centra el total en móviles
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) { // Para teléfonos más pequeños
+  .card-cart-details-container {
+    padding: 0.8rem;
+  }
+
+  .cart-item-card {
+    padding: 1rem; // Reduce un poco el padding de la tarjeta
+    
+    .item-image-wrapper {
+      app-image-optimized {
+        width: 90px; // Tamaño de imagen más pequeño para móviles muy pequeños
+        height: 90px;
+      }
+    }
+
+    .item-details {
+      p {
+        font-size: 0.85rem; // Más pequeño para pantallas muy pequeñas
+      }
+      .unit-price, .item-total {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .cart-total {
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+}

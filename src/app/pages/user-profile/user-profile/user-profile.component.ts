@@ -67,7 +67,7 @@ export class UserProfileComponent implements OnInit {
 
   getDisplayValue(key: string): string {
     if (!this.user) return '';
-    
+     
     // Direct property access for simple properties
     if (['name', 'surname', 'email', 'phone', 'birthdate', 'cardNumber', 'expirationDate'].includes(key)) {
       return this.user[key as keyof UserResponseDto] as string || '';
@@ -198,11 +198,9 @@ export class UserProfileComponent implements OnInit {
   private loadInitialData(): void {
 
     if(!this.isBrowser){
-      console.log(`I'm false isBrowser ${this.isBrowser}`);
+      
       return;
     }
-
-    console.log(`I'm true isBrowser ${this.isBrowser}`);
     const userId = this.authService.userId();
 
     this.countryService.getAllCountriesInfo().subscribe({
@@ -264,7 +262,6 @@ export class UserProfileComponent implements OnInit {
   }
 
   private handleDataLoadError = (error: any): void => {
-    console.error('Error loading data:', error);
     this.toastService.showToast(
       'Error loading data. Please try again.',
       ToastType.ERROR

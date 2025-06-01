@@ -37,3 +37,12 @@ export interface UserResponseDto {
     cardNumber: string;
     expirationDate: string;
 }
+
+export interface DashboardUserResponseDto {
+    id: number;
+    email: string;
+    roleName: string;
+    status: boolean;
+    createdAt: string;
+    countryName: string;
+}
